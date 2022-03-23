@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--navigation-->
+<link rel="stylesheet" href="nav.css">
+<!--main-->
+<link rel="stylesheet" href="index.css">
+<title>Lego Ranking</title>
+
+
+
+</head>
+<body>
+  <!--navigation-->
+<div class="topnav" id="myTopnav">
+  <div class="nav"><a href="index.html"  class="active" >Home</a></div>
+  <div class="nav dropdown">
+      <a href="original.html" >Technic Builds</a>
+      <div class="dropdown-content">
+          <a href="https://www.lego.com/en-ca/product/bmw-m-1000-rr-42130">Top1</a>
+          <a href="https://www.lego.com/en-ca/product/lamborghini-sian-fkp-37-42115">Top2</a>
+         
+      </div>
+</div>
+<div class="nav dropdown">
+    <a href="custom.html" >Lego City Builds</a>
+    <div class="dropdown-content">
+        <a href="https://www.lego.com/en-ca/product/fire-station-60320">Top1</a>
+        <a href="https://www.lego.com/en-ca/product/hospital-60330">Top2</a>
+      
+    </div>
+  </div>  
+  <div class="nav"><a href="about.html">About</a></div>
+ <div class="nav nav-icon"><a href="javascript:void(0);" class="icon" onclick="navFunction()">
+    <i class="fa fa-bars"></i>
+  </a></div> 
+</div>
+<main >
+  <!--video-->
+<script src="togglePauseNStart.js"></script>
+<div class="">
+    <video onclick="togglePause()" id="robotVideo" class="video-robot" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="robot-video.mp4" type="video/mp4">
+    </video>
+    <div class="text-robot" id="rob">
+        <h1 >Welcome to our</h1>
+        <h1>Website</h1>
+    </div>  
+</div>
+<!--text-->
+<div class="text">
+    <h3>Who are we?</h3>
+    <p>We are indepented fan company based in Canada</p>
+    <h3>What do we do?</h3>
+    <p>We rank diferent LEGO builds, same as custom and original projects. Also we have enoumous photo library of all lego builds that we were able to collect </p>
+    <h3>How can you help?</h3>
+    <p>Please refer to "About us" to learn more about how can you help us</p>
+    <h2>Gallerry</h2>
+    <!--slideshow-->
+    <h3>Technic Builds</h3>
+    <div class="slideshow " id="slide" >
+      <div class="left " onclick="plusDivs(-1)">&#10094;</div>
+      <img class="mySlides" src="https://www.lego.com/cdn/cs/set/assets/bltfd96e7d0e6e46fd5/80109_Prod.png?fit=bounds&format=png&width=1600&height=1600&dpr=1" >
+      <img class="mySlides" src="https://www.lego.com/cdn/cs/set/assets/bltfd96e7d0e6e46fd5/80109_Prod.png?fit=bounds&format=png&width=1600&height=1600&dpr=1" >
+      <img class="mySlides" src="https://www.lego.com/cdn/cs/set/assets/bltc6c7cf0ae6514ea8/80109_Box1_v39.png?fit=bounds&format=webply&quality=80&width=800&height=800&dpr=1" >
+      <div class="right " onclick="plusDivs(1)">&#10095;</div>
+    </div>
+    <h3>Lego City Builds</h3>
+    <div class="slideshow" >
+      <div class="left1 " onclick="plusDivs1(-1)">&#10094;</div>
+      <img class="mySlides1" src="https://www.lego.com/cdn/cs/set/assets/bltfd96e7d0e6e46fd5/80109_Prod.png?fit=bounds&format=png&width=1600&height=1600&dpr=1" >
+      <img class="mySlides1" src="https://www.lego.com/cdn/cs/set/assets/bltfd96e7d0e6e46fd5/80109_Prod.png?fit=bounds&format=png&width=1600&height=1600&dpr=1" >
+      <img class="mySlides1" src="https://www.lego.com/cdn/cs/set/assets/bltc6c7cf0ae6514ea8/80109_Box1_v39.png?fit=bounds&format=webply&quality=80&width=800&height=800&dpr=1" >
+      <div class="right1 " onclick="plusDivs1(1)">&#10095;</div>  
+    </div>
+</div>
+</main>
+<script src="nav.js"></script>
+<!--slideshow-->
+<script>
+  let slideIndex = 1;
+  showDivs(slideIndex);
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+  function showDivs(n) {
+    let i;
+    let x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex-1].style.display = "inline-block";  
+  }
+  </script>
+
+  <script>
+    let slideIndex1 = 1;
+  showDivs1(slideIndex1);
+  function plusDivs1(n) {
+    showDivs1(slideIndex1 += n);
+  }
+  function showDivs1(n) {
+    let i;
+    let x = document.getElementsByClassName("mySlides1");
+    if (n > x.length) {slideIndex1 = 1}
+    if (n < 1) {slideIndex1 = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex1-1].style.display = "inline-block"; 
+  } 
+  </script>
+</body>
+</html>

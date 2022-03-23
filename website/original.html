@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--navigation-->
+<link rel="stylesheet" href="nav.css">
+<!--main-->
+<link rel="stylesheet" href="original.css">
+<title>Lego Ranking</title>
+ 
+ 
+ 
+</head>
+<body>
+  <!--navigation-->
+<div class="topnav" id="myTopnav">
+  <div class="nav"><a href="index.html"   >Home</a></div>
+  <div class="nav dropdown">
+      <a href="original.html" class="active" >Technic Builds</a>
+      <div class="dropdown-content">
+          <a href="https://www.lego.com/en-ca/product/bmw-m-1000-rr-42130">Top1</a>
+          <a href="https://www.lego.com/en-ca/product/lamborghini-sian-fkp-37-42115">Top2</a>
+         
+      </div>
+</div>
+<div class="nav dropdown">
+    <a href="custom.html" >Lego City Builds</a>
+    <div class="dropdown-content">
+        <a href="https://www.lego.com/en-ca/product/fire-station-60320">Top1</a>
+        <a href="https://www.lego.com/en-ca/product/hospital-60330">Top2</a>
+       
+    </div>
+  </div>  
+  <div class="nav"><a href="about.html">About</a></div>
+ <div class="nav nav-icon"><a href="javascript:void(0);" class="icon" onclick="navFunction()">
+    <i class="fa fa-bars"></i>
+  </a></div>
+</div>
+<main >
+ 
+ 
+<!--text-->
+<div class="text">
+   <p>All ranking was done using our new system</p>
+   <p>Reminder it is fan project</p>
+   <p>You can see more detailed information by clicking on  links</p>
+    <!--slideshow-->
+    <h3><a href="https://www.lego.com/en-ca/product/bmw-m-1000-rr-42130" class="link">Top1</a></h3>
+    <div class="slideshow " id="slide" >
+      <div class="left " onclick="plusDivs(-1)">&#10094;</div>
+      <img class="mySlides" src="https://www.lego.com/cdn/cs/set/assets/bltd700d1de3f0e0ceb/42130_alt3.png?fit=bounds&format=png&width=800&height=800&dpr=1" >
+      <img class="mySlides" src="https://www.lego.com/cdn/cs/set/assets/blt9debefb37934b5ed/42130_alt5.jpg?fit=bounds&format=jpg&quality=80&width=1600&height=1600&dpr=1" >
+      <img class="mySlides" src="https://www.lego.com/cdn/cs/set/assets/blt6ca2bf25470fa437/42130_alt4.png?fit=bounds&format=webply&quality=80&width=800&height=800&dpr=2" >
+      <div class="right " onclick="plusDivs(1)">&#10095;</div>
+    </div>
+    <h3 class="link"><a href="https://www.lego.com/en-ca/product/lamborghini-sian-fkp-37-42115"class="link">Top2</a></h3>
+    <div class="slideshow" >
+      <div class="left1 " onclick="plusDivs1(-1)">&#10094;</div>
+      <img class="mySlides1" src="https://www.lego.com/cdn/cs/set/assets/bltee88e5e65f00bd00/42115.jpg?fit=bounds&format=jpg&quality=80&width=800&height=800&dpr=1" >
+      <img class="mySlides1" src="https://www.lego.com/cdn/cs/set/assets/bltd8f5d3a354de2582/42115_alt1.jpg?fit=bounds&format=webply&quality=80&width=800&height=800&dpr=1" >
+      <img class="mySlides1" src="https://www.lego.com/cdn/cs/set/assets/blt9d8117cbb6aac663/42115_alt6.jpg?fit=bounds&format=jpg&quality=80&width=800&height=800&dpr=1" >
+      <div class="right1 " onclick="plusDivs1(1)">&#10095;</div>  
+    </div>
+</div>
+</main>
+<script src="nav.js"></script>
+<!--slideshow-->
+<script>
+  let slideIndex = 1;
+  showDivs(slideIndex);
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+  function showDivs(n) {
+    let i;
+    let x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex-1].style.display = "inline-block";  
+  }
+  </script>
+ 
+  <script>
+    let slideIndex1 = 1;
+  showDivs1(slideIndex1);
+  function plusDivs1(n) {
+    showDivs1(slideIndex1 += n);
+  }
+  function showDivs1(n) {
+    let i;
+    let x = document.getElementsByClassName("mySlides1");
+    if (n > x.length) {slideIndex1 = 1}
+    if (n < 1) {slideIndex1 = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex1-1].style.display = "inline-block";
+  }
+  </script>
+</body>
+</html>
+
